@@ -4,7 +4,7 @@ include("conexion.php");
 
 // Evita que entren directamente escribiendo registrar.php en Chrome
 if ($_SERVER["REQUEST_METHOD"] !== "POST") {
-    header("Location: ../html/registro.html");
+    header("Location: registro.html");
     exit();
 }
 
@@ -25,7 +25,7 @@ if (
 ) {
     echo "<script>
         alert('Debes completar todos los campos');
-        window.location='../html/registro.html';
+        window.location='registro.html';
     </script>";
     exit();
 }
@@ -34,7 +34,7 @@ if (
 if (!filter_var($correo, FILTER_VALIDATE_EMAIL)) {
     echo "<script>
         alert('El correo electrónico no es válido');
-        window.location='../html/registro.html';
+        window.location='registro.html';
     </script>";
     exit();
 }
@@ -43,7 +43,7 @@ if (!filter_var($correo, FILTER_VALIDATE_EMAIL)) {
 if (strlen($password) < 8) {
     echo "<script>
         alert('La contraseña debe tener mínimo 8 caracteres');
-        window.location='../html/registro.html';
+        window.location='registro.html';
     </script>";
     exit();
 }
@@ -52,7 +52,7 @@ if (strlen($password) < 8) {
 if ($password !== $confirmar) {
     echo "<script>
         alert('Las contraseñas no coinciden');
-        window.location='../html/registro.html';
+        window.location='registro.html';
     </script>";
     exit();
 }
@@ -78,7 +78,7 @@ mysqli_stmt_store_result($consulta);
 if (mysqli_stmt_num_rows($consulta) > 0) {
     echo "<script>
         alert('El usuario o correo ya está registrado');
-        window.location='../html/registro.html';
+        window.location='registro.html';
     </script>";
     exit();
 }
@@ -112,14 +112,14 @@ if (mysqli_stmt_execute($insertar)) {
 
     echo "<script>
         alert('Usuario registrado correctamente');
-        window.location='../html/index.html';
+        window.location='index.html';
     </script>";
 
 } else {
 
     echo "<script>
         alert('Ocurrió un error al registrar el usuario');
-        window.location='../html/registro.html';
+        window.location='registro.html';
     </script>";
 }
 
