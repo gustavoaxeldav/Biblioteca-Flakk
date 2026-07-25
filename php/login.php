@@ -15,7 +15,7 @@ $password = $_POST["password"] ?? "";
 if ($usuario === "" || $password === "") {
     echo "<script>
         alert('Debes escribir el usuario y la contraseña');
-        window.location='../html/index.html';
+        window.location='index.html';
     </script>";
     exit();
 }
@@ -59,7 +59,7 @@ if (
 
 echo "<script>
     alert('Usuario o contraseña incorrectos');
-    window.location='../html/index.html';
+    window.location='index.html';
 </script>";
 
 ?>
