@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Biblioteca Flakk | Registro</title>
+
+    <link rel="stylesheet" href="../css/biblioteca.css">
+</head>
+
+<body class="registro-page">
+
+<header>
+    <div class="logo">
+        <img src="../img/logo.png" alt="Logo">
+        <h2>Biblioteca Flakk</h2>
+    </div>
+</header>
+
+<main class="contenedor">
+
+    <section class="registro">
+
+        <h1>Crear cuenta</h1>
+        <p>Llena los siguientes datos</p>
+
+        <form action="../php/registrar.php" method="POST">
+
+            <div class="input-box">
+                <label>Nombre completo</label>
+                <input type="text" name="nombre" required>
+            </div>
+
+            <div class="input-box">
+                <label>Correo electrónico</label>
+                <input type="email" name="correo" required>
+            </div>
+
+            <div class="input-box">
+                <label>Usuario</label>
+                <input type="text" name="usuario" required>
+            </div>
+
+            <div class="input-box">
+                <label>Contraseña</label>
+                <input
+                    type="password"
+                    name="password"
+                    minlength="4"
+                    required
+                >
+            </div>
+
+            <div class="input-box">
+                <label>Confirmar contraseña</label>
+                <input
+                    type="password"
+                    name="confirmar"
+                    minlength="4"
+                    required
+                >
+            </div>
+
+            <button type="submit">Registrarme</button>
+
+        </form>
+
+        <button
+            type="button"
+            class="secundario"
+            onclick="modoDaltonismo()"
+        >
+            Modo daltonismo
+        </button>
+
+        <p>
+            ¿Ya tienes cuenta?
+            <a href="index.html">Inicia sesión</a>
+        </p>
+
+    </section>
+
+</main>
+
+<footer>
+    Biblioteca Flakk © 2026
+</footer>
+
+<script src="../js/biblioteca.js"></script>
+
+</body>
+</html>
