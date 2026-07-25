@@ -13,7 +13,7 @@ include("auth.php");
 
     <title>Biblioteca Flakk | Catálogo</title>
 
-    <link rel="stylesheet" href="../css/biblioteca.css">
+    <link rel="stylesheet" href="css/biblioteca.css">
 
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
@@ -32,7 +32,7 @@ include("auth.php");
 
     <div class="logo">
         <img
-            src="../img/logo.png"
+            src="img/logo.png"
             alt="Logo"
             class="logo-img"
         >
@@ -52,17 +52,17 @@ include("auth.php");
             Inicio
         </a>
 
-        <a href="../html/ventas.html">
+        <a href="ventas.html">
             <i class="fa-solid fa-cart-shopping"></i>
             Ventas
         </a>
 
-        <a href="../html/almacen.html">
+        <a href="almacen.html">
             <i class="fa-solid fa-boxes-stacked"></i>
             Inventario
         </a>
 
-        <a href="../html/agregar.html">
+        <a href="agregar.html">
             <i class="fa-solid fa-plus"></i>
             Agregar libro
         </a>
@@ -121,7 +121,7 @@ include("auth.php");
     Biblioteca Flakk © 2026
 </footer>
 
-<script src="../js/biblioteca.js"></script>
+<script src="js/biblioteca.js"></script>
 
 </body>
 </html>
