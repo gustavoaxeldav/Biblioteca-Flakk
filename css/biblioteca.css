@@ -1,0 +1,778 @@
+/* ===========================
+      BIBLIOTECA FLAKK
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f5efe4;
+    color:#3d2b1f;
+    min-height:100vh;
+}
+
+/*========== HEADER ==========*/
+
+header{
+    background:#7b4f2c;
+    color:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 40px;
+    box-shadow:0 3px 10px rgba(0,0,0,.2);
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.logo img{
+    width:70px;
+    height:70px;
+    object-fit:contain;
+}
+
+.logo h2{
+    font-size:28px;
+    font-weight:600;
+}
+
+nav{
+    display:flex;
+    gap:15px;
+}
+
+nav a{
+    text-decoration:none;
+    color:white;
+    padding:10px 15px;
+    border-radius:8px;
+    transition:.3s;
+    font-weight:500;
+}
+
+nav a:hover{
+    background:#a06b42;
+}
+
+/*========== CONTENEDORES ==========*/
+
+.contenedor{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:70px;
+    padding:50px;
+    flex-wrap:wrap;
+}
+
+.imagen img{
+    width:320px;
+}
+
+/*========== LOGIN Y REGISTRO ==========*/
+
+.login,
+.registro{
+
+    background:#d8c3a5;
+
+    width:380px;
+
+    padding:35px;
+
+    border-radius:15px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.18);
+
+}
+
+.login h1,
+.registro h1{
+
+    text-align:center;
+    margin-bottom:10px;
+}
+
+.login p,
+.registro p{
+
+    text-align:center;
+    margin-bottom:20px;
+}
+
+.form{
+    width:100%;
+}
+
+/*========== INPUTS ==========*/
+
+.input-box{
+
+    display:flex;
+    flex-direction:column;
+    margin-bottom:18px;
+
+}
+
+.input-box label{
+
+    margin-bottom:5px;
+
+    font-weight:600;
+
+}
+
+.input-box input,
+.input-box select{
+
+    width:100%;
+
+    padding:12px;
+
+    border:none;
+
+    border-radius:8px;
+
+    outline:none;
+
+    background:white;
+
+    font-size:15px;
+
+}
+
+.input-box input:focus,
+.input-box select:focus{
+
+    border:2px solid #7b4f2c;
+
+}
+
+/*========== BOTONES ==========*/
+
+button{
+
+    width:100%;
+
+    padding:12px;
+
+    border:none;
+
+    border-radius:8px;
+
+    background:#7b4f2c;
+
+    color:white;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    margin-top:10px;
+
+    transition:.3s;
+
+}
+
+button:hover{
+
+    background:#5d391e;
+
+    transform:translateY(-2px);
+
+}
+
+/*========== LINKS ==========*/
+
+a{
+
+    color:#5d391e;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+}
+
+a:hover{
+
+    text-decoration:underline;
+
+}
+
+/*========== MENU ==========*/
+
+.menu{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    gap:25px;
+
+    padding:40px;
+
+}
+
+.tarjeta{
+
+    background:white;
+
+    border-radius:15px;
+
+    padding:30px;
+
+    text-align:center;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.15);
+
+    transition:.3s;
+
+    text-decoration:none;
+
+    color:#3d2b1f;
+
+}
+
+.tarjeta:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.tarjeta i{
+
+    font-size:55px;
+
+    color:#7b4f2c;
+
+    margin-bottom:15px;
+
+}
+
+.tarjeta h3{
+
+    margin-bottom:10px;
+
+}
+
+/*========== FOOTER ==========*/
+
+footer{
+
+    margin-top:40px;
+
+    background:#7b4f2c;
+
+    color:white;
+
+    text-align:center;
+
+    padding:15px;
+
+}
+
+/*==========================
+        CATÁLOGO
+==========================*/
+
+.catalogo{
+    padding:40px;
+    text-align:center;
+}
+
+.catalogo h1{
+    margin-bottom:20px;
+    color:#5d391e;
+}
+
+.barra{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:15px;
+    flex-wrap:wrap;
+    margin-bottom:30px;
+}
+
+.barra input,
+.barra select{
+
+    width:250px;
+    padding:12px;
+    border:none;
+    border-radius:8px;
+    background:white;
+    box-shadow:0 2px 8px rgba(0,0,0,.1);
+
+}
+
+.contenedor-libros{
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+    margin-top:25px;
+
+}
+
+.libro{
+
+    background:white;
+    border-radius:15px;
+    padding:20px;
+    box-shadow:0 8px 20px rgba(0,0,0,.12);
+    transition:.3s;
+
+}
+
+.libro:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.libro img{
+
+    width:120px;
+    height:170px;
+    object-fit:cover;
+    border-radius:8px;
+    margin-bottom:15px;
+
+}
+
+.libro h3{
+
+    margin-bottom:10px;
+    color:#5d391e;
+
+}
+
+.libro p{
+
+    margin:6px 0;
+
+}
+
+/*==========================
+      FORMULARIOS
+==========================*/
+
+.formulario{
+
+    width:100%;
+    max-width:700px;
+    margin:40px auto;
+    background:#d8c3a5;
+    padding:35px;
+    border-radius:15px;
+    box-shadow:0 8px 20px rgba(0,0,0,.18);
+
+}
+
+.formulario h1{
+
+    text-align:center;
+    margin-bottom:25px;
+
+}
+
+.form{
+
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+
+}
+
+/*==========================
+      INVENTARIO
+==========================*/
+
+.inventario{
+
+    width:95%;
+    margin:40px auto;
+
+}
+
+.inventario h2{
+
+    text-align:center;
+    margin-bottom:20px;
+
+}
+
+table{
+
+    width:100%;
+    border-collapse:collapse;
+    background:white;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 8px 20px rgba(0,0,0,.15);
+
+}
+
+th{
+
+    background:#7b4f2c;
+    color:white;
+    padding:15px;
+
+}
+
+td{
+
+    padding:12px;
+    border-bottom:1px solid #ddd;
+    text-align:center;
+
+}
+
+tr:hover{
+
+    background:#f3ebe0;
+
+}
+
+/*==========================
+      RESUMEN
+==========================*/
+
+.resumen{
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:20px;
+    padding:30px;
+
+}
+
+.card{
+
+    background:white;
+    border-radius:15px;
+    padding:25px;
+    text-align:center;
+    box-shadow:0 8px 20px rgba(0,0,0,.15);
+
+}
+
+.card h3{
+
+    margin-bottom:10px;
+
+}
+
+.card p{
+
+    font-size:28px;
+    font-weight:bold;
+    color:#7b4f2c;
+
+}
+
+/*==========================
+      VENTAS
+==========================*/
+
+.ventas{
+
+    width:100%;
+    max-width:700px;
+    margin:40px auto;
+    background:#d8c3a5;
+    padding:35px;
+    border-radius:15px;
+    box-shadow:0 8px 20px rgba(0,0,0,.18);
+
+}
+
+.ventas h1{
+
+    text-align:center;
+    margin-bottom:20px;
+
+}
+
+.ventas select,
+.ventas input{
+
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:8px;
+    margin-bottom:15px;
+
+}
+
+/*==========================
+      ANIMACIONES
+==========================*/
+
+@keyframes aparecer{
+
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+.login,
+.registro,
+.tarjeta,
+.libro,
+.formulario,
+.ventas,
+.card,
+table{
+
+    animation:aparecer .6s ease;
+
+}
+
+/*==========================
+      SCROLL
+==========================*/
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#f5efe4;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#7b4f2c;
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#5d391e;
+
+}
+
+/*==========================
+      DALTONISMO
+==========================*/
+
+body.daltonismo{
+
+    background:#0b1d3a;
+    color:white;
+
+}
+
+body.daltonismo header{
+
+    background:#163b72;
+
+}
+
+body.daltonismo footer{
+
+    background:#163b72;
+    color:white;
+
+}
+
+body.daltonismo nav a{
+
+    color:white;
+
+}
+
+body.daltonismo nav a:hover{
+
+    background:#245599;
+
+}
+
+body.daltonismo .login,
+body.daltonismo .registro,
+body.daltonismo .tarjeta,
+body.daltonismo .libro,
+body.daltonismo .formulario,
+body.daltonismo .ventas,
+body.daltonismo .card{
+
+    background:#204d88;
+    color:white;
+
+}
+
+body.daltonismo h1,
+body.daltonismo h2,
+body.daltonismo h3,
+body.daltonismo h4,
+body.daltonismo p,
+body.daltonismo label,
+body.daltonismo span{
+
+    color:white;
+
+}
+
+body.daltonismo a{
+
+    color:#FFD54F;
+
+}
+
+body.daltonismo input,
+body.daltonismo select{
+
+    background:white;
+    color:black;
+    border:none;
+
+}
+
+body.daltonismo table{
+
+    background:#204d88;
+    color:white;
+
+}
+
+body.daltonismo th{
+
+    background:#FFD54F;
+    color:black;
+
+}
+
+body.daltonismo td{
+
+    background:#204d88;
+    color:white;
+    border:1px solid rgba(255,255,255,.2);
+
+}
+
+body.daltonismo tr:hover{
+
+    background:#2d63ad;
+
+}
+
+body.daltonismo button{
+
+    background:#FFD54F;
+    color:black;
+    font-weight:bold;
+
+}
+
+body.daltonismo button:hover{
+
+    background:#f5c400;
+
+}
+
+/*==========================
+      RESPONSIVE
+==========================*/
+
+@media(max-width:900px){
+
+header{
+
+    flex-direction:column;
+    gap:15px;
+    text-align:center;
+
+}
+
+nav{
+
+    flex-wrap:wrap;
+    justify-content:center;
+
+}
+
+.contenedor{
+
+    flex-direction:column;
+    padding:25px;
+
+}
+
+.imagen img{
+
+    width:220px;
+
+}
+
+.login,
+.registro,
+.formulario,
+.ventas{
+
+    width:95%;
+
+}
+
+.menu{
+
+    grid-template-columns:1fr;
+
+}
+
+.contenedor-libros{
+
+    grid-template-columns:1fr;
+
+}
+
+.resumen{
+
+    grid-template-columns:1fr;
+
+}
+
+table{
+
+    font-size:14px;
+
+}
+
+th,
+td{
+
+    padding:8px;
+
+}
+
+button{
+
+    font-size:15px;
+
+}
+
+}    
