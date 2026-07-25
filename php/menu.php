@@ -12,7 +12,7 @@ include("auth.php");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Biblioteca Flakk | Menú</title>
 
-    <link rel="stylesheet" href="../css/biblioteca.css">
+    <link rel="stylesheet" href="css/biblioteca.css">
 </head>
 
 <body>
@@ -20,7 +20,7 @@ include("auth.php");
 <header>
 
     <div class="logo">
-        <img src="../img/logo.png" alt="Logo">
+        <img src="img/logo.png" alt="Logo">
         <h2>Biblioteca Flakk</h2>
     </div>
 
@@ -46,19 +46,19 @@ include("auth.php");
     </a>
 
     <!-- Agregar libro -->
-    <a class="tarjeta" href="../html/agregar.html">
+    <a class="tarjeta" href="agregar.html">
         <h3>➕ Agregar libro</h3>
         <p>Registrar nuevos libros.</p>
     </a>
 
     <!-- Registrar venta -->
-    <a class="tarjeta" href="../html/ventas.html">
+    <a class="tarjeta" href="ventas.html">
         <h3>🛒 Registrar venta</h3>
         <p>Registrar ventas de libros.</p>
     </a>
 
     <!-- Inventario -->
-    <a class="tarjeta" href="../html/almacen.html">
+    <a class="tarjeta" href="almacen.html">
         <h3>📦 Inventario</h3>
         <p>Consultar existencias.</p>
     </a>
@@ -81,7 +81,7 @@ include("auth.php");
     Biblioteca Flakk © 2026
 </footer>
 
-<script src="../js/biblioteca.js"></script>
+<script src="js/biblioteca.js"></script>
 
 </body>
 </html>
