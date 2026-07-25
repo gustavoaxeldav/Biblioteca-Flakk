@@ -79,12 +79,6 @@ function crearTarjetaLibro(libro) {
     return `
         <article class="libro">
 
-            <img
-                src="${imagen}"
-                alt="Portada de ${libro.titulo}"
-                onerror="this.src='../img/portadas/sin-portada.jpg'"
-            >
-
             <h3>${libro.titulo}</h3>
 
             <p>
@@ -553,32 +547,6 @@ function mostrarInventario() {
 }
 
 /* =========================================
-   BUSCADOR
-========================================= */
-
-const buscar =
-    document.getElementById("buscar");
-
-buscar?.addEventListener(
-    "input",
-    mostrarLibros
-);
-
-/* =========================================
-   FILTRO POR CATEGORÍA
-========================================= */
-
-const filtroCategoria =
-    document.getElementById(
-        "filtroCategoria"
-    );
-
-filtroCategoria?.addEventListener(
-    "change",
-    mostrarLibros
-);
-
-/* =========================================
    FECHA
 ========================================= */
 
@@ -607,6 +575,22 @@ if (fecha) {
 document.addEventListener(
     "DOMContentLoaded",
     () => {
+
+        const buscar =
+            document.getElementById("buscar");
+
+        buscar?.addEventListener(
+            "input",
+            mostrarLibros
+        );
+
+        const filtroCategoria =
+            document.getElementById("filtroCategoria");
+
+        filtroCategoria?.addEventListener(
+            "change",
+            mostrarLibros
+        );
 
         obtenerLibros();
         obtenerVentas();

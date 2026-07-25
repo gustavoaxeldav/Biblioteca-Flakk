@@ -10,8 +10,7 @@
 }
 
 body{
-    background:#f5efe4;
-    color:#3d2b1f;
+    color:#3d2b2f;
     min-height:100vh;
 }
 
@@ -776,3 +775,31 @@ button{
 }
 
 }    
+
+/* ================= FONDO LOGIN Y REGISTRO ================= */
+
+body.login-page,
+body.registro-page{
+    background: linear-gradient(
+        135deg,
+        #4b2e1f 0%,
+        #7b4f2c 50%,
+        #d8c3a5 100%
+    );
+}
+
+body:not(.login-page):not(.registro-page){
+    background: #f5f0e6;
+}
+
+/* ================= MODO DALTONISMO EN LOGIN Y REGISTRO ================= */
+
+body.login-page.daltonismo,
+body.registro-page.daltonismo {
+    background: linear-gradient(
+        135deg,
+        #003f5c 0%,
+        #2f4b7c 50%,
+        #f1c40f 100%
+    );
+}

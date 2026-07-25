@@ -77,13 +77,16 @@ include("auth.php");
 
     <div class="barra">
 
-        <input
-            type="text"
-            id="buscar"
-            placeholder="Buscar libro o autor..."
-        >
-
-        <select id="filtroCategoria">
+    <input
+    type="text"
+    id="buscar"
+    placeholder="Buscar libro o autor..."
+    oninput="mostrarLibros()"
+>
+       <select
+    id="filtroCategoria"
+    onchange="mostrarLibros()"
+>
 
             <option value="Todos">
                 Todas las categorías
